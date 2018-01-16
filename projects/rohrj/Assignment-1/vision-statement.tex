@@ -1,0 +1,61 @@
+%\documentclass[12pt,a4paper]{article}
+\documentclass[letterpaper,12pt,titlepage]{article}
+
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{wasysym}
+
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+% This is a comment
+\title{Cash4Trash}
+\author{Team Jonathan: Jonathan Rohr (rohrj) and Johnathan Lee (leejohna)}
+
+\begin{document}
+\maketitle
+
+\section{Identifying the Problem}
+Earth is the only planet in this solar system that can sustain meaningful life. Humanity is lucky to have the privilege of sharing this planet with a diverse population of animals and plant life. Our forests, beaches, oceans, and plains shape the beautiful rock we call home, but something is out of place. There is an unnatural virus spreading throughout the landscape that is infecting the animals and plants that dwell there and poisoning the soil on which we roam. This disease is purely man-made and humans are the only carriers. Mass amounts of litter engulfs our roads and engorges our oceans, polluting the land we walk on and the air we breathe.
+\newline
+\newline
+75\% of people in the United States say that they have littered in the last 5 years. Of this garbage~\cite{litterfactslutherking}, 90\% are fast food items, aluminum, or paper and 50\% of that are cigarette butts. A surprisingly low 2\% of the worlds liter is plastic~\cite{infographic} and this seems like a small number, but when you take into account the 5.25 trillion pieces of plastic in the oceans~\cite{oceantrash}, the magnitude of our litter epidemic becomes staggering. Ocean animals are negatively effected by the plastics we throw into rivers and the sea because they are not digestible and fish can get tangled in strands of plastic and rope. Land animals can also eat litter thinking it is food and suffer from internal damage. Garbage can stunt plant growth and ruin ecosystems. Litter also hurts the communities where it is abundant by lowering house prices, spreading diseases by luring rats to the area, and lowering water quality as the contaminates seep into the soil~\cite{litterfacts}.
+\newline
+\newline
+In an attempt to clean the trash off the streets, our government has to spend around \$11.5 billion to clean up roadside litter alone~\cite{litterfactslutherking}. Laws against littering and successful PSA campaigns has decreased the extend America litters, but they can only do so much. People who litter will always litter and picking up after them seems unfair especially if there is no motivator other than doing the right thing. If some of the government money was re-purposed to help get citizens involved in cleaning up the streets and beaches, it could create a large impact in the fight against litter. People would have an incentive to pick up garbage and become more conscious of how trash negatively impacts the environment.
+\newpage
+
+\section{Features of Cash4Trash}
+We could program a mobile application called Cash4Trash that would handle user uploaded photos of litter that they find and pay them 10\cent\ for whatever they pick up and throw away properly. Users can take the photo from within the application and we will use GPS or geo-tagging to accurately find where the photo was taken. Alternatively, they could upload photos from their gallery and manually tag a location to identify where the photo was taken. Users are limited to 50 uploads every 24 hours to ensure they do not abuse the system and send in pictures of the same item multiple times. All this data will be combined to create an interactive heat map that shows the application usage across the United States and the types of items that were cleaned up. Each piece of litter the user picks up will be added to an individual counter showing the total amount of trash they have cleaned up. It will also be added to a global counter that will show how much the United States has picked up using the application. 
+\newline
+\newline
+Additional features that we will include will be a profile page that displays the individuals balance and options to send it to PayPal, donate to charity, or turn it into a gift card at selected companies. There will also be an informational litter tab that will have some facts about litter to help users understand its negative impact. We also hope to include motivational encouragement when you successfully pick up litter like an inspirational quote or "Thanks for cleaning the Earth!". This will help users remember they are making a real difference even if they only pick up a few items of trash a day or week. A litter verification system would also be developed to ensure that the pictures aren't falsified.
+\newline
+\newline
+There is another application that specifies in litter clean up, but it is very limited in its design and purpose. It only allows the user to increase a global counter by uploading photos of litter and places the pictures in a gallery that the user can access. The key difference from this application is that Cash4Trash would be a free service that rewards users for cleaning up the environment by paying them for picking up the litter that they discover and allows them to see where others are doing the same.
+\newpage
+The following is an example of how the typical user would use Cash4Trash:
+As the user walks down a road, they see a tattered plastic bag flailing in the wind. They pull out their phone and snap a photo of it. They then open up the Cash4Trash application and upload the image from their gallery. Our verification software would confirm that the photo is of trash before sending the appropriate payment of 10\cent\ to the user's balance. The image and its location will be sent to the mapping software to place it on the heat map. The user could then send the money they have earned to their PayPal. They could also open up the map and view where other users are picking up trash.
+\newline
+\newline
+
+\section{Risks and Challenges to Cash4Trash}
+The limitations and risk of our approach is that it is easily abusable. It would be very hard to make a verification system able to confirm people picking up the litter that they are taking a picture of. People could farm money off of our application which is why we decided to limit the amount of money someone could earn per day (\$5). Attaining the money needed for this approach is also a limitation because there is no profit to be gained by this application.
+\newline
+\newline
+Resources needed for this project include hardware such as different types of phones/tablets, software for mobile application programming (Objective-C for iOS and Java for Android), and money to reward the users. This money could come from the government, sponsors, donations, or even ad revenue.
+\newline
+\newline
+The most challenging aspect of developing this product on time would be coding the economy system because that is where most our resources are pooling into. Gathering the necessary funds would also be a challenge since giving users money is a main focus of the application. There would be small ads within the application, but that revenue would not be enough to fund this project. The money would have to come from bigger corporations for the greater good of protecting the Earth.
+\newpage
+
+\bibliography{myref}
+\bibliographystyle{ieeetr}
+
+\end{document}
