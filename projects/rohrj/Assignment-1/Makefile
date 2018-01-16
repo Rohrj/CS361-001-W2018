@@ -1,9 +1,10 @@
-# this is a comment
-
 TARGET=vision-statement
+
 
 default: pdf
 
+bib: bib
+	bibtex ${TARGET}
 
 dvi: ${TARGET}.tex 
 #	run latex twice to get references correct
@@ -29,6 +30,9 @@ clean-ps: clean-dvi
 	rm -f ${TARGET}.ps
 
 clean-pdf: clean-ps
+	rm -f ${TARGET}.bbl
+	rm -f ${TARGET}.blg
 	rm -f ${TARGET}.pdf
+
 
 clean: clean-pdf
