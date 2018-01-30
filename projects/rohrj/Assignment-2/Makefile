@@ -1,4 +1,4 @@
-TARGET=software-requirements
+TARGET=WellLiv-SRP
 
 # default: pdf
 
