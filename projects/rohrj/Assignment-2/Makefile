@@ -1,23 +1,32 @@
-TARGET=vision-statement
+TARGET=software-requirements
 
+# default: pdf
 
-default: pdf
+all: $(TARGET).pdf
 
-bib: bib
-	bibtex ${TARGET}
+# bib: bib
+# 	bibtex ${TARGET}
 
-dvi: ${TARGET}.tex 
-#	run latex twice to get references correct
-	latex ${TARGET}.tex
-#	you can also have a bibtex line here
-	bibtex $(TARGET)
-	latex $(TARGET).tex
+# dvi: ${TARGET}.tex 
+# #	run latex twice to get references correct
+# 	latex ${TARGET}.tex
+# #	you can also have a bibtex line here
+# 	# bibtex $(TARGET)
+# 	latex $(TARGET).tex
 
-ps: dvi
-	dvips -R -Poutline -t letter ${TARGET}.dvi -o ${TARGET}.ps
+# ps: dvi
+# 	dvips -R -Poutline -t letter ${TARGET}.dvi -o ${TARGET}.ps
 
-pdf: ps
-	ps2pdf ${TARGET}.ps
+# pdf: ps
+# 	ps2pdf ${TARGET}.ps
+
+$(TARGET).pdf: *.tex
+	pdflatex -shell-escape $(TARGET).tex
+	pdflatex -shell-escape $(TARGET).tex
+	# makeindex $(TARGET)
+	# bibtex $(TARGET)
+	pdflatex -shell-escape $(TARGET).tex
+	pdflatex -shell-escape $(TARGET).tex
 
 clean-dvi:
 	rm -f ${TARGET}.aux
