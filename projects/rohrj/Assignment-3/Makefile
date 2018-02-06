@@ -4,8 +4,8 @@ TARGET=WellLiv-SDSUI
 
 all: $(TARGET).pdf
 
-bib: bib
- 	bibtex ${TARGET}
+#bib: bib
+ 	#bibtex ${TARGET}
 
 # dvi: ${TARGET}.tex 
 # #	run latex twice to get references correct
@@ -20,11 +20,11 @@ bib: bib
 # pdf: ps
 # 	ps2pdf ${TARGET}.ps
 
-$(TARGET).pdf: *.tex
+$(TARGET).pdf: *.tex *.bib
 	pdflatex -shell-escape $(TARGET).tex
 	pdflatex -shell-escape $(TARGET).tex
-	# makeindex $(TARGET)
-        bibtex $(TARGET)
+	#makeindex $(TARGET)
+	bibtex $(TARGET)
 	pdflatex -shell-escape $(TARGET).tex
 	pdflatex -shell-escape $(TARGET).tex
 
