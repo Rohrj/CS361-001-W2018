@@ -1,11 +1,11 @@
-TARGET=WellLiv-SRP
+TARGET=WellLiv-SDSUI
 
 # default: pdf
 
 all: $(TARGET).pdf
 
-# bib: bib
-# 	bibtex ${TARGET}
+bib: bib
+ 	bibtex ${TARGET}
 
 # dvi: ${TARGET}.tex 
 # #	run latex twice to get references correct
@@ -24,7 +24,7 @@ $(TARGET).pdf: *.tex
 	pdflatex -shell-escape $(TARGET).tex
 	pdflatex -shell-escape $(TARGET).tex
 	# makeindex $(TARGET)
-	# bibtex $(TARGET)
+        bibtex $(TARGET)
 	pdflatex -shell-escape $(TARGET).tex
 	pdflatex -shell-escape $(TARGET).tex
 
