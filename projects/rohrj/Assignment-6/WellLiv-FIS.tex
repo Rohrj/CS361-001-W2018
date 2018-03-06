@@ -1,0 +1,471 @@
+%\documentclass[12pt,a4paper]{article}
+\documentclass[letterpaper,12pt,titlepage]{article}
+
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{wasysym}
+\usepackage{graphicx}
+
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+% This is a comment
+\title{First Implementation of the System}
+\author{
+  \texttt{Sarahi Pelayo (pelayos)}
+  \\[.5ex]
+  \texttt{Katherine Jeffrey (jeffreyk)}
+  \\[.5ex]
+  \texttt{Megan Bigelow (bigelowm)}
+  \\[.5ex]
+  \texttt{Johnathan Lee (leejohna)}
+  \\[.5ex]
+  \texttt{Jonathan Rohr (rohrj)}
+}
+
+\begin{document}
+\maketitle
+
+\section{Product Release}
+
+\underline{https://drive.google.com/file/d/1ANwDP7b8iqA7L6Fz0cBplyrN1N9MFxcn/view?usp=sharing}
+\newline
+\newline
+INSTALLING AND SETTING UP THE APP
+\newline
+\newline
+STEP 1: After downloading the apk on your android device (android required), navigate to the downloads folder (can be found under the "My Files" shortcut).
+\newline
+\newline
+STEP 2: Click on WellLiv-DEMO.apk.
+\newline
+\newline
+STEP 3: Click "INSTALL".
+\newline
+\newline
+STEP 4: Navigate to your apps folder and open up the WellLiv app.
+\newline
+\newline
+STEP 5: When the app opens, type in a desired passcode (length of four) and press "CREATE A NEW PASSCODE".
+\newline
+\newline
+STEP 6: If you close the app and open it again, it will ask you to sign in with the password you previously created. Enter that passcode and press "SIGN IN".
+\newline
+\newline
+NAVIGATING THE APP
+\newline
+\newline
+On the bottom of the home screen there is three shortcuts on a navigation bar.
+\newline
+\newline
+The leftmost shortcut will take you to the home screen where the emergency numbers are located.
+\newline
+\newline
+The middle shortcut will take you to the information page where you can read facts, definitions, and other information about PTSD, sexual assault, abuse, and depression.
+\newline
+\newline
+The rightmost shortcut will take you to the resources page where you can find hotlines, psychotherapy resources, and information for various support groups.
+\newline
+\newline
+On the top-left of the app is where the home button is located. This will take you back to the home screen from any other screen.
+\newline
+\newline
+On the top-right of the app there is the symptoms log shortcut which will take you to the symptoms log.
+\newline
+\newline
+Next to the log shortcut is the settings shortcut.
+\newline
+\newline
+In the symptoms log, you can click individual days on the calendar and input symptoms for that day by pressing the "+" modal in the bottom-right.
+\newline
+\newline
+Pressing the phone's back button at when in the symptoms log will take you back to the main area.
+
+\newpage
+\section{User Story}
+
+\textbf{Story: Passcode Validation}
+\newline
+\newline
+\underline{Team members assigned:}
+Katherine and Sarahi
+\newline
+\underline{Problems encountered:}
+How to able to check the passcode if we don’t have implementation to be able to save a new passcode first. How to communicate feedback to the user so they know to create a new passcode. How to compare strings in java because it the same as c++ but that was not the case.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+A json file contains the passcode need to enter the application. If the passcode already exists in the json file then the user input is compared to the passcode. When correct allows access and if incorrect outputs a message letting the user know that it is incorrect and to try again. The check of whether the passcode already exists prompts the user for a passcode that is stored into the passcode json.
+\newline
+\underline{What is left to be completed for this story?}
+This story is complete. The next passcode related task we need to complete it a startup tutorial that helps the user set up a password.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was somewhat useful in the sense that it showed how this story implementation is not really tied to other implementations this is seen in the UML because it shows the passcode functionality is its own separate class. The UML diagram was not extremely helpful because it wasn’t super detailed in the methods, but I think this is a positive thing. Because we made some design changes and schedule changes with this story a too detailed diagram might have not had the flexibility to accommodate for these changes.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Make Emergency Call 1}
+\newline
+\newline
+\underline{Team members assigned:}
+Megan and Jonathan
+\newline
+\underline{Problems encountered:}
+Main problem was getting the switch statement working for strings.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+When the user clicks the poison control phone number listed on the home page, the app will open the dialer with that phone number ready to be called. The poison control number is currently hard-coded.
+\newline
+\underline{What is left to be completed for this story?}
+The user story is fully implemented and tested, but we still need to finish final tests to ensure it works on multiple devices.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful because it allowed us to visual how the user would interact with the home page.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Make Emergency Call 2}
+\newline
+\newline
+\underline{Team members assigned:}
+Megan and Jonathan
+\newline
+\underline{Problems encountered:}
+Main problem was getting the switch statement working for strings.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+When the user clicks “911”, which is listed on the home page, the app will open the dialer with that phone number ready to be called. The number “911” is currently hard-coded.
+\newline
+\underline{What is left to be completed for this story?}
+The user story is fully implemented and tested, but we still need to finish final tests to ensure it works on multiple devices.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful because it allowed us to visual how the user would interact with the home page.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Make Emergency Call 3}
+\newline
+\newline
+\underline{Team members assigned:}
+Megan and Jonathan
+\newline
+\underline{Problems encountered:}
+Main problem was getting the switch statement working for strings.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+When the user clicks the suicide hotline listed on the home page, the app will open the dialer with that phone number ready to be called. The suicide hotline is currently hard-coded.
+\newline
+\underline{What is left to be completed for this story?}
+The user story is fully implemented and tested, but we still need to finish final tests to ensure it works on multiple devices.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful because it allowed us to visual how the user would interact with the home page.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Use Resources Part 1}
+\newline
+\newline
+\underline{Team members assigned:}
+Megan and Jonathan
+\newline
+\underline{Problems encountered:}
+Main problem was finding a way to implementing the list of clickable links in a different activity.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+When the user clicks the sexual assault helpline listed in the hotlines section of the resources page, the app will open the dialer with that phone number ready to be called. The sexual assault hotline is currently hard-coded.
+\newline
+\underline{What is left to be completed for this story?}
+The user story is fully implemented and tested, but we still need to finish final tests to ensure it works on multiple devices.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful because it allowed us to visual how the user would interact with the home page.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Use Resources Part 2}
+\newline
+\newline
+\underline{Team members assigned:}
+Megan and Jonathan
+\newline
+\underline{Problems encountered:}
+Main problem was finding a way to implementing the list of clickable links in a different activity.
+\newline
+\underline{Time taken:}
+1st work session, 2 hours
+\newline
+\underline{Currently...\textbf{Tested}:}
+When the user clicks the psychiatric helpline listed in the hotlines section of the resources page, the app will open the dialer with that phone number ready to be called. The psychiatric helpline is currently hard-coded.
+\newline
+\underline{What is left to be completed for this story?}
+The user story is fully implemented and tested, but we still need to finish final tests to ensure it works on multiple devices.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful because it allowed us to visual how the user would interact with the home page.
+\newline
+\newline
+
+\noindent
+\textbf{Story: Symptom Log}
+\newline
+\newline
+\underline{Team members assigned:}
+Katherine
+\newline
+\underline{Problems encountered:}
+A json file that can be altered and updated at runtime must be saved in the phone’s local storage. The json file used for testing was initially stored in the apk, not created at runtime. This led to problems with the first implementation.
+\newline
+\underline{Time taken:}
+5 hours in several solo worksessions
+\newline
+\underline{Currently...(coding/implemented/tested):}
+When you open the symptom log a calendar is on the page and by default the current date is highlighted. You can press a button on the bottom left that will open the add symptoms page. There a list of three categories: physical, mental, and mood. When you select on of these categories the list expanded under the corresponding category with some symptoms that may be selected. Then to complete the logging of the symptoms there is a button labeled “log” at the bottom of this page. On click of the log button the page closed returns to symptom log page with a pop up at the bottom that says “logged”  is feedback for user to let them know that it worked.
+\newline
+\underline{What is left to be completed for this story?}
+The json files can now be updated dynamically but the lists of symptoms need to be completed. A way to select and deselect items before adding them to the file is needed. Further testing of the implementation still needs to be done.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was useful conceptually, but it did not help with implementation. No concept diagram would have been more helpful.
+\newline
+\newline
+
+\newpage
+\section{Design Changes and Rationale}
+
+In our schedule we had decided to to the tutorial for setting up the passcode during the second week of implementation because we thought it wasn't a priority. When we began implementing the the passcode verification story we realized we didn’t have saved passcodes to be able to verify. We decided to make a design change to to our implementation schedule. We would work on being able to save a passcode in order to then work on passcode verification. This would mean implementing part of the tutorial to setup the application. The customers were asked how they would like the to be guided in setting up the passcode. There was a message that would pop asking the user to make a new passcode by entering it and then clicking “sign in” button. However the customer found that sign in and create were somewhat contradicting. A design change was made to reduce possible confusion. Instead of a message popping up, when it is the first time setting up the application i.e. not passcode has been saved previously the sign in button says “create passcode”. Then after they create it the next time the user wants to access the application the button will be “sign in”.  
+\newline
+\newline
+Another design change is seen for the symptom log. In the original prototype the symptom log was a short cut at the bottom of the screen. Now the symptom log is on the top left hand corner. The rationale for this design change was it would make it more accessible from any page in the application the user would be on. Originally we were going to save the information needed to create  symptom log on the database until we made a design change to put this on a json file instead because it would be easier to implement for this specific task.
+\newline
+\newline
+For the calling emergency numbers the original design allowed the the users the click one of the three numbers and immediately begin the call. However a small design change was made to this. Instead of calling the app puts the selected number into the phones dialer, where the user then has to click call. The reasoning behind this change was to avoid possible human error of the user calling numbers if they accidentally touch them. This is important because since these numbers are on the home page the likelihood of this error is probable.
+
+\newpage
+\section{Tests}
+
+Test Cases:
+\begin{itemize}
+\item When password is set up, inputting the correct password allows entry while inputting a wrong password blocks access. An empty input is seen as incorrect.
+\item Basic menu UI functionality, able to go through different menus
+\item Outgoing calls are made when the appropriate button is clicked
+\item Symptom logging
+\item When an external site is clicked, it redirects to that site
+\end{itemize}
+\vspace{.2in}
+\noindent
+\textbf{Test Case 1:} Passcode Validation
+\newline
+\newline
+To test for passcode validation, the passcode will be initially set up as a specific value. The test will involve inputs of selected incorrect passcodes, no passcode entry and the correct passcode. When inputting an incorrect passcode or no passcode, the user should be prompted that it is incorrect and allow the user to attempt another passcode. When inputting the correct passcode, the app should allow the user access to the application and open to the main page.
+\newline
+\newline
+Correct passcode set up: 1234
+\newline
+\newline
+Input data: 1234
+\newline
+\newline
+Expected Outcome: The application opens to the main page and user has access to all application functionality.
+\newline
+\newline
+Tested Result: The application accepts the passcode and opens to the main page giving user access to application and all functionality.
+\newline
+\newline
+Expected Outcome vs Result: The application executed as expected. Test successful and no bugs detected.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input data: No value
+\newline
+\newline
+Expected Result: The application prompts the user with a message stating the input is incorrect and stays on the login page allowing the user to input another passcode. The user is not given access to the rest of the application.
+\newline
+\newline
+Tested Result: The application does not accept passcode and notifies user with a message stating the input is incorrect. The application stays on the login page and allows for another passcode input. The user is not given access to the application.
+\newline
+\newline
+Expected Outcome vs Result: The application executes as expected and no bugs are detected. Test is successful.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input data: 0, 123, 4321, 12345
+\newline
+\newline
+Expected Result: For all of these inputs, the application prompts the user with a message stating the input is incorrect and stays on the login page allowing the user to input another passcode. The user is not given access to the rest of the application.
+\newline
+\newline
+Tested Result: The application does not accept each of these passcode inputs and notifies user with a message stating the input is incorrect. The application stays on the login page and allows for another passcode input. The user is not given access to the application.
+\newline
+\newline
+Expected Outcome vs Result: The application executes as expected and no bugs are detected. Test is successful.
+\newline
+\newline
+
+\noindent
+\textbf{Test Case 2:} Initiate Emergency Phone Call (User Stories 1-3)
+\newline
+\newline
+To test an outgoing call, we will use inputs of selected phone numbers including the emergency hotlines intended for the application. There are three emergency phone numbers listed on the ‘Emergency’ page of the application (911, poison control and a suicide hotline) and when one is selected by the user, the phone’s dialer will open with the selected phone number ready to initiate the phone call by the user.
+\newline
+\newline
+Input Data: 911
+\newline
+\newline
+Expected Outcome: When '911'\cite{911} is selected, the dialer will open with ‘911’ ready to call.
+\newline
+\newline
+Tested Result: '911' is selected and opens in the dialer We did not initiate phone call to test if an outgoing call will be made.
+\newline
+\newline
+Expected Outcome vs Result: The result was as expected and test is successful.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: 1-800-222-1222
+\newline
+\newline
+Expected Outcome: 'Poison Control'\cite{poison} is selected and the dialer opens with '1-800-222-1222'. Initiating the phone call dials the correct phone number.
+\newline
+\newline
+Tested Result: '1-800-222-1222' opens in the dialer and correct number is called when call is initiated.
+\newline
+\newline
+Expected Outcome vs Result: The result was as expected and test is successful.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: 1-800-273-8255
+\newline
+\newline
+Expected Outcome: 'Suicide Hotline'\cite{suicide} is selected and the dialer opens with '1-800-273-8255'. Initiating phone call dials the correct phone number.
+\newline
+\newline
+Tested Result: '1-800-273-8255' opens in the dialer and correct number is called when call is initiated.
+\newline
+\newline
+Expected Outcome vs Result: The result was as expected and test is successful.
+\newline
+\newline
+
+\noindent
+\textbf{Test Case 3:} Redirect to External Web Site
+\newline
+\newline
+The 'Information' page of the application will include four topics (Depression, PTSD, Sexual Assault and Abuse) and each will have a web link to an external site with more information regarding the topic. When a web link is selected by the user, they will be redirected to the selected web page with their default browser. This functionality has not yet been implemented. We will use the following method for testing after implementation.
+\newline
+\newline
+Input Data: Depression Web Link
+\newline
+\newline
+Expected Outcome: The web link for the 'Depression' topic is selected and the user is redirected to the correct web site in their default browser.
+\newline
+\newline
+Tested Result: Not yet tested.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Depression' topic web link in the default browser then the test is successful. If the web link does not open or the incorrect web link opens then the test fails.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: PTSD Web Link
+\newline
+\newline
+Expected Outcome: The 'PTSD' topic web link is selected and the user is redirected to the associated web page in the default browser.
+\newline
+\newline
+Tested Result: Not yet tested.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'PTSD' topic web link then the test is successful. If the web page does not open or the wrong web page opens then the test fails and there is a bug.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: Sexual Assault Web Link
+\newline
+\newline
+Expected Outcome: The 'Sexual Assault' topic web link is selected and the application redirects the user to the associated web page in the default browser.
+\newline
+\newline
+Test Result: Not yet tested.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Sexual Assault' topic web link then the test is successful. If the wrong web page or no web page opens then the test fails.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: Abuse Web Link
+\newline
+\newline
+Expected Outcome: The 'Abuse' topic web link is selected and the application redirects the user to the correct web page in the default browser.
+\newline
+\newline
+Tested Result: Not yet tested.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Abuse' topic web page then the test is successful. If the wrong web page opens or no web page opens then the test fails.
+
+\newpage
+\section{Meeting Report}
+\underline{Seventh meeting:} 3/1 in person at 3:00pm-5:00pm
+\begin{itemize}
+\item Members present: Sarahi Pelayo, Katherine Jeffrey, Jonathan Rohr, Johnathan Lee, Megan Bigelow
+\item Discussed: Who will set up assignment 6, how to make new activity pages, how to work with json file
+\item Progress: Johnathan created assignment 6 Google doc, set up the outline and shared it with the group. Katherine created a json file for storing symptoms. Katherine and Sarahi worked on the passcode story. They got the the passcode validation working and checking if a new passcode is needed. Jonathan and Megan worked on the dialing story and were able to get it working where they called the specified phone number depending on which hotline they pressed. Johnathan has worked on the research.
+\item Plans: Writing to a json file needs to be implemented in order to create a new passcode when the check shows that a passcode does not already exist. 
+\item Customers were willing and able to meet.
+\end{itemize}
+\noindent
+\underline{Eighth meeting:} 3/4 in person, 11:00pm-12:30pm
+\begin{itemize}
+\item Members present: Sarahi Pelayo, Jonathan Rohr, Megan Bigelow
+\item Discussed: Understanding Katherine’s solo work on the symptom log and how to support her work. How to get both the written report of assignment 6 and the implementation done.
+\item Progress: Jonathan added to the user stories, Sarahi added design changes, and Megan added testing.
+\item Plans: To polish up everything making sure it is all complete and turn in the assignment. Next week continue implementation of the next stories.
+\item Customers were willing and able to meet.
+\end{itemize}
+\textbf{Next Week}
+\begin{itemize}
+\item Logging(previous), looking at symptoms, hard coding information and linking to external sites. The estimated time for logging(previous) will be very short because logging(today) should be completed the week prior which will make logging(previous) much easier. The estimated time for hard coding information and hyperlinking is very short as well as we estimate that will be one of our easier tasks.
+\end{itemize}
+\newpage
+
+\bibliography{myref}
+\bibliographystyle{ieeetr}
+\textbf{GitHub Repo:} 
+https://github.com/Rohrj/CS361-001-W2018/tree/Assignment-6/projects/rohrj
+\end{document}
