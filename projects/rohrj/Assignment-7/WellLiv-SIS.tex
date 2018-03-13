@@ -1,0 +1,411 @@
+%\documentclass[12pt,a4paper]{article}
+\documentclass[letterpaper,12pt,titlepage]{article}
+
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{wasysym}
+\usepackage{graphicx}
+
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+% This is a comment
+\title{Second Implementation of the System}
+\author{
+  \texttt{Sarahi Pelayo (pelayos)}
+  \\[.5ex]
+  \texttt{Katherine Jeffrey (jeffreyk)}
+  \\[.5ex]
+  \texttt{Megan Bigelow (bigelowm)}
+  \\[.5ex]
+  \texttt{Johnathan Lee (leejohna)}
+  \\[.5ex]
+  \texttt{Jonathan Rohr (rohrj)}
+}
+
+\begin{document}
+\maketitle
+
+\section{Product Release}
+
+\underline{https://drive.google.com/file/d/1qSPe8DkqNESc\_y4TgkAwyXe\_yJbW\_10-/view?usp=sharing}
+\newline
+\newline
+INSTALLING AND SETTING UP THE APP
+\newline
+\newline
+STEP 1: After downloading the apk on your android device (android required), navigate to the downloads folder (can be found under the "My Files" shortcut).
+\newline
+\newline
+STEP 2: Click on WellLiv-DEMO.apk.
+\newline
+\newline
+STEP 3: Click "INSTALL".
+\newline
+\newline
+STEP 4: Navigate to your apps folder and open up the WellLiv app.
+\newline
+\newline
+STEP 5: When the app opens, type in a desired passcode (length of four) and press "CREATE A NEW PASSCODE".
+\newline
+\newline
+STEP 6: If you close the app and open it again, it will ask you to sign in with the password you previously created. Enter that passcode and press "SIGN IN".
+\newline
+\newline
+NAVIGATING THE APP
+\newline
+\newline
+On the bottom of the home screen there is three shortcuts on a navigation bar.
+\newline
+\newline
+The leftmost shortcut will take you to the home screen where the emergency numbers are located.
+\newline
+\newline
+The middle shortcut will take you to the information page where you can read facts, definitions, and other information about PTSD, sexual assault, abuse, and depression.
+\newline
+\newline
+The rightmost shortcut will take you to the resources page where you can find hotlines, psychotherapy resources, and information for various support groups.
+\newline
+\newline
+On the top-left of the app is where the home button is located. This will take you back to the home screen from any other screen.
+\newline
+\newline
+On the top-right of the app there is the symptoms log shortcut which will take you to the symptoms log.
+\newline
+\newline
+Next to the log shortcut is the settings shortcut.
+\newline
+\newline
+In the symptoms log, you can click individual days on the calendar and input symptoms for that day by pressing the "+" modal in the bottom-right.
+\newline
+\newline
+Pressing the phone's back button at when in the symptoms log will take you back to the main area.
+
+\newpage
+\section{User Story}
+
+\textbf{Story: Symptom Logging}
+\newline
+\newline
+\underline{Team members assigned:}
+Katherine
+\newline
+\underline{Problems encountered:}
+Not being able to write to the symptoms json file that is in our assets folder because it is a read only file. So another method of being able to store a passcode and retrieving it to log was needed. This other method was storing information to the phones local memory.  Also having all the symptoms as one object was as an issue to solve this an array of objects was used instead.
+\newline
+Getting dates in the correct format so they could be used for logging and the calendar required some research and refactoring. The dates are received from an imported method in android, but the are given in milliseconds so the needed to be formatted for use in the log.
+\newline
+The local json files are implicitly set to write over themselves when updated. This meant previous data would be lost each time a new symptom was logged. The files had to be set to append in the java method so logs would be added into the file after the existing logs. 
+\newline
+\underline{Time taken:}
+10+ hours in a few work sessions
+\newline
+\underline{Currently...\textbf{Tested}:}
+The symptom log has been implemented and tested. Users can add symptoms to the current day. On clicking a date on the calendar a list of the symptoms logged for that day shows up in a dialog box with a close button for removing the dialog. If no symptoms were logged that day the list says no symptoms logged. More tests would be beneficial, but the implementation is complete. 
+\newline
+\underline{What is left to be completed for this story?}
+Further testing can be done on this story. A date picker could be implemented for adding symptom logs to dates other than the current date. 
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was not particularly helpful for this story. The concept was clear, it was only the implementation that caused problems. Only previous experience could have helped with implementing this story.
+\newline
+\newline
+\newpage
+\noindent
+\textbf{Story: Use of information page part 4: Visiting external website}
+\newline
+\newline
+\underline{Team members assigned:}
+Jonathan R.
+\newline
+\underline{Problems encountered:}
+At first the links were not clickable, but a quick search on Google\cite{google} helped me solve the problem.
+\newline
+\underline{Time taken:}
+Single work session, an hour
+\newline
+\underline{Currently...\textbf{Tested}:}
+The story has been implemented and tested. Users can navigate to a topic located on the information page and scroll down to the underlined links within the text and click them. Once clicked, the app will open the phone’s default browser and display the appropriate website.
+\newline
+\underline{What is left to be completed for this story?}
+Nothing is left to be completed. The story is complete.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was not necessarily needed for this story. It did not have any particular use other than giving us an inkling prior to coding. There wasn’t a diagram we wished we had as the ones we already did have had limited use.
+\newline
+\newline
+\noindent
+\textbf{Story: Use of resources part 3: Visiting external website}
+\newline
+\newline
+\underline{Team members assigned:}
+Jonathan R.
+\newline
+\underline{Problems encountered:}
+At first the links were not clickable, but a quick search on Google\cite{google} helped me solve the problem.
+\newline
+\underline{Time taken:}
+Single work session, an hour
+\newline
+\underline{Currently...\textbf{Tested}:}
+The story has been implemented and tested. Users can navigate to a topic located on the information page and scroll down to the underlined links within the text and click them. Once clicked, the app will open the phone’s default browser and display the appropriate website.
+\newline
+\underline{What is left to be completed for this story?}
+Nothing is left to be completed. The story is complete.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was not necessarily needed for this story. It did not have any particular use other than giving us an inkling prior to coding. There wasn’t a diagram we wished we had as the ones we already did have had limited use.
+\newline
+\newline
+\newpage
+\noindent
+\textbf{Story: Passcode Creation Tutorial}
+\newline
+\newline
+\underline{Team members assigned:}
+Sarahi and Katherine
+\newline
+\underline{Problems encountered:}
+Not being able to read from the passcode json file that is in our assets folder because it is a read only file. So another method of being able to store a passcode and retrieving it to log was needed. This other method was storing information to the phones local memory. After changing to using the local memory one of our passcode validation was incorrect and because after a new passcode was saved locally it wasn’t in the json file so even when the user correctly logged in feedback that the passcode is incorrect is outputted. 
+Another small problem was when we tried comparing passcodes for validating that it was created correctly we did not know how to compare string in java. We thought we could use the “==” operator for this but found it did no work so we looked up the syntax and found that we needed to use the “.equals”.
+\newline
+\underline{Time taken:}
+Several hours in multiple work sessions. 
+\newline
+\underline{Currently...\textbf{Tested}:}
+This story has been implemented and tested. Users can set the passcode on initial run and sign in for each subsequent session. The passcode can be changed on the settings page. Tests passed so the story is complete. 
+\newline
+\underline{What is left to be completed for this story?}
+The story is complete. The passcode functionality works as intended.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was not particularly useful in this story except to show how this story is separate from the other functionality.
+\newline
+\newline
+\newpage
+\noindent
+\textbf{Story: Hard coding static information in the resources page}
+\newline
+\newline
+\underline{Team members assigned:}
+Jonathan R. and Johnathan L.
+\newline
+\underline{Problems encountered:}
+Adjusting the window size and moving it to fit nicely on the phone screen so it would be more visually appealing. Previously we could not scroll on the screen thus not all the text was accessible so we added in allowing it to scroll the text. We also wanted to change what kind of information we wanted to include after we saw that on the phone it would look like a big block of text that mean it hard to find specific information at a quick glance difficult. We moved from having just basic definitions to including statistics and sources in our information pages and to make it easier on the user to read we added the corresponding headings.
+\newline
+\underline{Time taken:}
+A couple of hours in a few work sessions.
+\newline
+\underline{Currently...\textbf{Tested}:}
+Implemented and tested. It is verified that it can be navigated to and the information is displayed properly. It completes the story.
+\newline
+\underline{What is left to be completed for this story?}
+Nothing. It is finished and is viewable.
+\newline
+\underline{Was the UML diagram useful, were there any diagrams you wish you had?}
+The UML diagram was not necessarily needed for this story. It did not have any particular use other than giving us an inkling prior to coding. There wasn’t a diagram we wished we had as the ones we already did have had limited use.
+\newline
+\newline
+
+\noindent
+\newpage
+\section{Design Changes and Rationale}
+Originally we were going to use a database to store information needed for the symptom log and passcode. When we starting implementing the symptom log and passcode functionality we decided to switch to using json files instead because we thought it would be easier than the database. That was last week and this week we made another change to that decision because we ran into some road blocks with the json files. 
+\newline
+\newline
+The passcode json file found in the assets was a read only file, which worked for only half of the functionality we need that is reading and validating. We need to be able to set new passcodes so we changed it to using the phone’s local storage instead. We removed the functions for tying to write to the passcode json file. To implement the passcode creation when the user is using the application for the first time they enter a passcode that is then stored in a local file on the memory used by the application on the phone. This solved our issue of not being able to write to read only json files.
+\newline
+\newline
+The symptom log json file found in the assets were found to be read only files, which worked for only half of the functionality we need that is reading the option of symptoms displayed in the symptom log. We need to be able to set save symptoms selected by the user. Instead of finding a way to get around the read only issue of the file we changed our design to using some of the memory used by the application on the phone’s local storage. We removed the functions for tying to write to the json files and replaced them with ones that access local memory and this solved our issues.
+\newline
+\newline
+When adding in hard coded information that was researched the information was a wall of text we changed the design of how we will be presenting this information. We added in headers to break up the text and increase readability. We also decided to include statistics to the pages and sources on where we got our information from.
+
+\newpage
+\section{Refactoring}
+During the initial design of the app the app’s theme had to be changed to accommodate the toolbar at the top of the screen. A toolbar was needed to implement navigation through the app. Buttons to reach the symptom log, emergency numbers and settings needed to have a place in the top right corner. The toolbar also allowed for changing the title at the top of the screen to match the current activity. Each of the java files needed to be refactored to implement this change. 
+\newline
+\newline
+On the main page there is a list of emergency contacts that when clicked will dial the number. These are 911, Poison Control, and Suicide Hotline. The initial design showed clicking these numbers would immediately call them but this was refactored to include an extra step. When clicked the numbers are put into the phone’s existing calling app and the user must click call there to complete the call. This will keep users from accidentally clicking an emergency number while browsing the app. 
+\newline
+\newline
+While implementing the Symptom Log several methods were refactored. The function for copying the json files from the assets folder to local storage needed to change so it would append instead of writing over the file. The function for parsing the symptoms json file had to be refactored after the layout of the json file was changed to having the logs in an array. The function for writing to the json file also had to be refactored to accommodate this. 
+\newline
+\newline
+In the adding symptoms activity the dates were obtained from an imported android method but they were given in milliseconds so they had to be formatted so they could be used in the logs. The date formatting methods had to be refactored several times to achieve the correct format. The first method gave the correct year and day but the month was off by 1. The months and days less than 10 had a leading 0 which had to be removed.
+\newline
+\newline
+To get the passcode from the passcode json file the functions for loading and parsing json files needed to be refactored. They were first used for the symptom log but the symptoms and passcode json files are structured differently so the functions would not work for both. The symptoms are stored as objects in a log array within the json object. The passcode is simply a value in the json object. 
+
+\newpage
+\section{Tests}
+\textbf{Test Case 1:} Passcode Creation
+\newline
+\newline
+To test for passcode creation, the passcode will be initially set up as a value of zero. The test will involve inputs of new passcode, and then logging out to log back in with the created passcode to check if entry is given with the created passcode. When inputting the created passcode the user should allow the user gain access to the application and open to the main page. When the user inputs the old passcode in this case “0” the user should get an error message that it’s incorrect and be prompted to try again.
+\newline
+\newline
+Correct passcode set up: 0
+\newline
+\newline
+Input data: 4444
+\newline
+\newline
+Expected Outcome: The application saves this as a newly created passcode and opens to the main page and user has access to all application functionality. After exiting and  logging in again the application opens with the saved pin.
+\newline
+\newline
+Tested Result: The application saves this as a newly created passcode and opens to the main page and user has access to all application functionality. After exiting and  logging in again the application opens with the saved pin.
+\newline
+\newline
+Expected Outcome vs Result: The application executes as expected and no bugs are detected. Test is successful.
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input data: 444, 4441, 12345 (incorrect values)
+\newline
+\newline
+Expected Result: For all of these inputs, the application recognizes that they are not the newly created passcode and prompts the user with a message stating the input is incorrect and stays on the login page allowing the user to input another passcode. The user is not given access to the rest of the application.
+\newline
+\newline
+Tested Result: The application does not accept each of these passcode inputs and notifies user with a message stating the input is incorrect. The application stays on the login page and allows for another passcode input. The user is not given access to the application.
+\newline
+\newline
+Expected Outcome vs Result: The application executes as expected and no bugs are detected. Test is successful.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\noindent
+\textbf{Test Case 2:} Log Symptoms
+\newline
+\newline
+To test log symptoms user navigates to symptom log and clicks the plus button in the lower right hand corner. This will open the add symptom activity. User clicks the items in the list to show the symptoms in that group. User clicks the symptoms to add them to the log. The user clicks the log button when the user is done adding symptoms. A message should pop up with a log confirmation message and redirects to the symptom log calendar page. The user clicks on the date on the calendar to see a list of symptoms for that day.
+\newline
+\newline
+Input data: Calm, Tired
+\newline
+\newline
+Expected Result: In current date, Symptoms: Calm, Tired
+\newline
+\newline
+Tested Result: In current date, Symptoms: Calm, Tired
+\newline
+\newline
+Expected Outcome vs Result: Test passes.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input data: Headache, Nightmares, Sad
+\newline
+\newline
+Expected Result: In current date, Symptoms: Headache, Nightmares, Sad
+\newline
+\newline
+Tested Result: In current date, Symptoms: Headache, Nightmares, Sad
+\newline
+\newline
+Expected Outcome vs Result: Test passes
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input data: No input
+\newline
+\newline
+Expected Result: In current date, Symptoms: No symptoms logged
+\newline
+\newline
+Tested Result: In current date, Symptoms: No symptoms logged
+\newline
+\newline
+Expected Outcome vs Result: Test passes
+\newline
+\newline
+
+\noindent
+\textbf{Test Case 3:} Redirect to External Web Site %this is identical?? I left test case 3 unchanged from assignment 6
+\newline
+\newline
+The 'Information' page of the application will include four topics (Depression, PTSD, Sexual Assault and Abuse) and each will have a web link to an external site with more information regarding the topic. When a web link is selected by the user, they will be redirected to the selected web page with their default browser. This functionality has been fully implemented. We used the following method for testing.
+\newline
+\newline
+Input Data: Depression Web Link
+\newline
+\newline
+Expected Outcome: The web link for the 'Depression' topic is selected and the user is redirected to the correct web site in their default browser.
+\newline
+\newline
+Tested Result: The app opens up the phone’s default browser and displays the Depression Web Link.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Depression' topic web link in the default browser then the test is successful. If the web link does not open or the incorrect web link opens then the test fails.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: PTSD Web Link
+\newline
+\newline
+Expected Outcome: The 'PTSD' topic web link is selected and the user is redirected to the associated web page in the default browser.
+\newline
+\newline
+Tested Result: The app opens up the phone’s default browser and displays the PTSD Web Link.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'PTSD' topic web link then the test is successful. If the web page does not open or the wrong web page opens then the test fails and there is a bug.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: Sexual Assault Web Link
+\newline
+\newline
+Expected Outcome: The 'Sexual Assault' topic web link is selected and the application redirects the user to the associated web page in the default browser.
+\newline
+\newline
+Test Result: The app opens up the phone’s default browser and displays the Sexual Assault Web Link.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Sexual Assault' topic web link then the test is successful. If the wrong web page or no web page opens then the test fails.
+\newline
+\newline
+------------------------------------------------------------------------------------------------------
+\newline
+Input Data: Abuse Web Link
+\newline
+\newline
+Expected Outcome: The 'Abuse' topic web link is selected and the application redirects the user to the correct web page in the default browser.
+\newline
+\newline
+Tested Result: The app opens up the phone’s default browser and displays the Abuse Web Link.
+\newline
+\newline
+Expected Outcome vs Result: If the application opens the 'Abuse' topic web page then the test is successful. If the wrong web page opens or no web page opens then the test fails.
+
+\newpage
+\section{Meeting Report}
+\begin{itemize}
+\item Meeting: March 9, 2018, in person after class
+\item Members present: Sarahi Pelayo, Katherine Jeffrey, Megan Bigelow, Johnathan Lee, Jonathan Rohr
+\item Discussed: Progress on the application so far and how to progress forward, and refactoring. Demo of for everyone of what we have and how we plan on presenting it later.
+\item Progress:  The new password creation is working by saving it to a local file then checking it next time the user wants to enter. Decided how we will be demoing the application
+\item Plans: Fix user feedback, make the application more visually appealing, and symptom logging for past dates. Be able to visit external websites. Add in researched information. Add another heading to information to increase readability.
+\item Customers were willing and able to meet
+\end{itemize}
+\textbf{Goals for next week:}
+\newline
+We will work on the slides for the presentation that will have some of our initial requirements, practice presenting and live demoing for the class by using the projector. Our presentation will be  back and fourth be between slides that show the requirements than us showing the application meets those. Also we are to meet with the TA and demo our assignment 6 and 7. Lastly we have to each individually complete team member evaluations.
+\newpage
+
+\bibliography{myref}
+\bibliographystyle{ieeetr}
+\textbf{GitHub Repo:}
+https://github.com/Rohrj/CS361-001-W2018/tree/Assignment-7/projects/rohrj
+
+\end{document}
